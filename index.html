@@ -573,6 +573,7 @@
 
 <script>
     var sound = "";
+    var url = "";
 function search() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -592,14 +593,16 @@ function search() {
  
 
 function play(sound) {
-        fetch("https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c")
-        textToClipboard (sound);
+        fetch("https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c");
+        url = "https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c" ;
+        
+        textToClipboard (url);
     };   
 
-    function textToClipboard (sound) {
+    function textToClipboard (url) {
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
-    dummy.value = sound;
+    dummy.value = url;
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
