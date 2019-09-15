@@ -41,10 +41,11 @@
 #stop {
     border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
+  background-color: #eeecec;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: 700;
   color: red;
   display: block;
   cursor: pointer;
@@ -54,8 +55,8 @@
 </head>
 <body>
 
-<input type="text" id="myInput" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
-<div id="stop" onclick="play('moods/12584')">Stop</div>
+<input type="text" id="myInput" onkeyup="search()" onfocus="this.value=''" value="Sound search...">
+<div id="stop" onclick="play('moods/12584')">Stop all sounds!</div>
 <ul id="myUL">
   <li><a href="#" onclick="play('elements/129')" >Adele</a></li>
   <li><a href="#" onclick="play('moods/19')" >Kev</a></li>
