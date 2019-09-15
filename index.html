@@ -38,21 +38,31 @@
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+#stop {
+    border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: red;
+  display: block;
+  cursor: pointer;
+}
+
 </style>
 </head>
 <body>
 
 <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
-
+<div id="stop" onclick="play('moods/12584')">Stop</div>
 <ul id="myUL">
   <li><a href="#" onclick="play('elements/129')" >Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
+  <li><a href="#" onclick="play('moods/19')" >Kev</a></li>
+  <li><a href="#" onclick="play('moods/19')" >Sily</a></li>
+  <li><a href="#" onclick="play('moods/19')" >Test</a></li>
+  <li><a href="#" onclick="play('moods/19')" >Lii</a></li>
 
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
 </ul>
 
 
