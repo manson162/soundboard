@@ -2,61 +2,17 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-#stop {
-    border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #eeecec;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  color: red;
-  display: block;
-  cursor: pointer;
-}
-
-</style>
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="/style.css">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </head>
 <body>
 
 <input type="text" id="myInput" onkeyup="search()" onfocus="this.value=''" value="Sound search...">
-<div id="stop" onclick="play('moods/12584')">Stop all sounds!</div>
+<button id="stop" onclick="play('moods/12584')" class="mdc-fab app-fab--absolute" aria-label="Favorite">
+  <span class="mdc-fab__icon material-icons">stop</span>
+</button>
 <ul id="myUL">
         <li><a href="https://open.spotify.com/playlist/3NYcM27cdv1SdGr5BaKOjt" target="_blank">Spotify - Small Fight</a></li>
         <li><a href="https://open.spotify.com/playlist/0owy79ie2CPyNBBX3kYlnN" target="_blank">Spotify - Boss Fight</a></li>
@@ -987,52 +943,7 @@
 <li><a href="#" onclick="play('elements/248244')">Exotic palace - Pleasure</a></li>
 <li><a href="#" onclick="play('elements/248245')">Exotic palace - Room doors</a></li>
 </ul>
-
-
-
-
-
-<script>
-    var sound = "";
-    var url = "";
-function search() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
- 
-
-function play(sound) {
-        fetch("https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c");
-        url = "https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c" ;
-        
-        textToClipboard (url);
-    };   
-
-    function textToClipboard (url) {
-    var dummy = document.createElement("textarea");
-    document.body.appendChild(dummy);
-    dummy.value = url;
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
-}
-
- 
-
-</script>
-
+<script src="main.js"></script>
 
 </body>
 </html>
