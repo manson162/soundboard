@@ -5,22 +5,24 @@
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </head>
 <body>
-
+<div class="navbar">
 <input type="text" id="myInput" onkeyup="search()" onfocus="this.value=''" value="Sound search...">
 <button id="stop" onclick="play('moods/12584')" class="mdc-fab app-fab--absolute" aria-label="Favorite">
   <span class="mdc-fab__icon material-icons">stop</span>
 </button>
+</div>
 <ul id="myUL">
-        <li><a href="https://open.spotify.com/playlist/3NYcM27cdv1SdGr5BaKOjt" target="_blank">Spotify - Small Fight</a></li>
-        <li><a href="https://open.spotify.com/playlist/0owy79ie2CPyNBBX3kYlnN" target="_blank">Spotify - Boss Fight</a></li>
-        <li><a href="https://open.spotify.com/playlist/0cHjz26KSVx6px1eaRL2g0" target="_blank">Spotify - Peacefull</a></li>
-        <li><a href="https://open.spotify.com/playlist/45zZjZIjJxqRQXFM80ntVL" target="_blank">Spotify - Creepy</a></li>
-        <li><a href="https://open.spotify.com/playlist/72raMhZQoI1z9RrjHc1JKB" target="_blank">Spotify - Big Creepy</a></li>
-        <li><a href="https://open.spotify.com/playlist/4so3ruXpkxaGvoiIRuwtqS" target="_blank">Spotify - Epic</a></li>
-        <li><a href="https://open.spotify.com/playlist/5hi4KcO9i2rDLZ4wnjw2f1" target="_blank">Spotify - Ironslag</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/3NYcM27cdv1SdGr5BaKOjt" target="_blank"><i class="fa fa-music"></i>    Small Fight</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/0owy79ie2CPyNBBX3kYlnN" target="_blank"><i class="fa fa-music"></i> Boss Fight</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/0cHjz26KSVx6px1eaRL2g0" target="_blank"><i class="fa fa-music"></i> Peacefull</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/45zZjZIjJxqRQXFM80ntVL" target="_blank"><i class="fa fa-music"></i> Creepy</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/72raMhZQoI1z9RrjHc1JKB" target="_blank"><i class="fa fa-music"></i> Big Creepy</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/4so3ruXpkxaGvoiIRuwtqS" target="_blank"><i class="fa fa-music"></i> Epic</a></li>
+        <li class="spotify"><a href="https://open.spotify.com/playlist/5hi4KcO9i2rDLZ4wnjw2f1" target="_blank"><i class="fa fa-music"></i> Ironslag</a></li>
         <li><a href="#" onclick="play('elements/222660')">Mad voices</a></li>
 <li><a href="#" onclick="play('elements/222650')">Ill wind</a></li>
 <li><a href="#" onclick="play('elements/222651')">Illusory echoes</a></li>

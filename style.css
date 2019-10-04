@@ -16,8 +16,20 @@
   #myUL {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-top: 50px;
+    
   }
+  #myUL .spotify a{
+    
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e1e1e1; 
+
+  }
+
+  .fa {
+    padding-right: 15px;
+  }
+
   
   #myUL li a {
     border: 1px solid #ddd;
@@ -47,4 +59,21 @@
       bottom: 1.5rem;
       right: 1.5rem;
     }
+  }
+
+  .navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 99%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
