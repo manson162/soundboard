@@ -20,8 +20,8 @@ function search() {
  
 
 function play(sound) {
-        fetch("https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c");
-        url = "https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=7fbf0ac05ddfeed27a277718de562f2ed9e4e61c" ;
+        fetch("https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=818530df6cf4b76e0b60a8108895c09e99545532");
+        url = "https://www.syrinscape.com/online/frontend-api/" + sound + "/play/?auth_token=818530df6cf4b76e0b60a8108895c09e99545532" ;
         
         textToClipboard (url);
     };   
