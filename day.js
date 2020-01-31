@@ -1,7 +1,7 @@
-var theTime = 0;
+var theTime = 12;
 var bg = "url('imgs/midday.svg')";
-var savedTime;
-var timeSelectedName = 'Test'; 
+var savedTime = 12;
+var timeSelectedName = 'Miday'; 
 document.getElementById('timeSelected').innerHTML = Cookies.get('savedTime') + ':00 - ' + Cookies.get('timeSelectedName');
 document.getElementById('slection').value = Cookies.get('savedTime');
 document.body.style.backgroundImage = Cookies.get('bg');
