@@ -1,79 +1,82 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  #myInput {
-    background-image: url('/css/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-  }
-  
-  #myUL {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 50px;
-    
-  }
-  #myUL .spotify a{
-    
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #e1e1e1; 
+  box-sizing: border-box;
+}
 
-  }
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
-  .fa {
-    padding-right: 15px;
-  }
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
 
-  
-  #myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block
-  }
-  
-  #myUL li a:hover:not(.header) {
-    background-color: #eee;
-  }
+}
+
+#myUL .spotify a {
+
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #e1e1e1;
+
+}
+
+.fa {
+  padding-right: 15px;
+}
 
 
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+.app-fab--absolute {
+  background-color: red;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
   .app-fab--absolute {
-    background-color: red;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
-  
-  @media(min-width: 1024px) {
-     .app-fab--absolute {
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-  }
+}
 
-  .navbar {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 99%;
-  }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 99%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
