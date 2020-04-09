@@ -1,3 +1,5 @@
+var allSounds = "";
+
 function search() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -31,11 +33,11 @@ fetch("./sounds.json")
     })
     .then(function (data) {
         preformLoop(data);
-
+        allSounds = data;
     })
 
 function preformLoop(data) {
-
+    document.getElementById("myUL").innerHTML = "";
 
     for (i = 0; i < data.length; i++) {
 
@@ -45,7 +47,7 @@ function preformLoop(data) {
             line.className = "soundBar";
             var url = "\"https://www.syrinscape.com/online/frontend-api/" + data[i].Trigger + "/play/?auth_token=1e93a1db5e982879f3a030972f5367cf0eefdf69\""
             var sound = "\"" + data[i].ID + "\""
-            line.innerHTML = "<a href='#0'  onclick='play(" + url + ")'> <b>" + data[i].Name + "</b> - " + data[i].Type + "</a> <a href='#0'  onclick='removeFav(" + sound + ")'> <i class='fa fa-toggle-on' aria-hidden='true'></i>"
+            line.innerHTML = "<a href='#0' class='name' onclick='play(" + url + ")'> <b>" + data[i].Name + "</b> - " + data[i].Type + "</a> <a href='#0' class='fav' onclick='removeFav(" + sound + ")'> <i class='fa fa-toggle-on' aria-hidden='true'></i>"
             "</a>";
 
             document.getElementById("myUL").appendChild(line);
@@ -60,7 +62,7 @@ function preformLoop(data) {
             line.className = "soundBar";
             var url = "\"https://www.syrinscape.com/online/frontend-api/" + data[i].Trigger + "/play/?auth_token=1e93a1db5e982879f3a030972f5367cf0eefdf69\""
             var sound = "\"" + data[i].ID + "\""
-            line.innerHTML = "<a href='#0'  onclick='play(" + url + ")'> <b>" + data[i].Name + "</b> - " + data[i].Type + "</a> <a href='#0'  onclick='fav(" + sound + ")'>   <i class='fa fa-toggle-off' aria-hidden='true'></i> "
+            line.innerHTML = "<a href='#0' class='name' onclick='play(" + url + ")'> <b>" + data[i].Name + "</b> - " + data[i].Type + "</a> <a href='#0' class='fav' onclick='fav(" + sound + ")'>   <i class='fa fa-toggle-off' aria-hidden='true'></i> "
             "</a>";
 
             document.getElementById("myUL").appendChild(line);
@@ -85,9 +87,11 @@ function play(url) {
 function fav(sound) {
     localStorage.setItem(sound, "Fav");
 
+    preformLoop(allSounds)
 }
 
 function removeFav(sound) {
     localStorage.removeItem(sound, "Fav");
 
+    preformLoop(allSounds)
 }

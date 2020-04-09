@@ -32,6 +32,14 @@
   padding-right: 15px;
 }
 
+.soundBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  flex: 1;
+}
 
 #myUL li a {
   border: 1px solid #ddd;
