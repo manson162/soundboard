@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a playlist.." title="Type in a name">
+
+    <ul id="myUL">
+        <li>
+
+            <a href="#">
+
+                <p>🎧 <strong>Cavern</strong><small> - Ambient</small></p>
+                <iframe src="https://open.spotify.com/embed/playlist/7cgECSzxFYwjHugNdbur1O" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe width="300" height="80" src="https://www.youtube.com/embed/ET7RNVdTh7Y" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </a>
+        </li>
+        <li>
+
+            <a href="#">
+
+                <p>⚔️ <strong>Fighting ring</strong><small> - crowd, cheering, gladiator</small></p>
+                <iframe width="300" height="80" src="https://www.youtube.com/embed/ij3_VIJxd9s" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </a>
+        </li>
+        <li><a href="#">
+                <p>⚔️ <strong>Standard fight</strong><small> - combat, fight, battle</small></p>
+
+                <iframe src="https://open.spotify.com/embed/playlist/1AscGLchV2T76RdWhiVQPh" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/0bWUBjlr7O4troJKyyMVbD" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/6T0UOAmlbWb29y2fIETtL2" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </a>
+        </li>
+        <li><a href="#">
+                <p>⚔️ <strong>Boss fight</strong><small> - combat, fight, battle</small></p>
+                <iframe src="https://open.spotify.com/embed/playlist/5RjkMX4fQEgTICNug5omYX" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/5ZmPA1UDbsnAQPaemtZuCh" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/0Q6hJZYIEu3LwbyBBHjjHo" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </a>
+        </li>
+        <li><a href="#">
+                <p>🦇 <strong>Creepy</strong><small> - scary, spooky, dark, horror, gloom</small></p>
+                <iframe src="https://open.spotify.com/embed/playlist/51dPJFi9wXucHLkP9R4hxW" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/02eZddIGudBBiYXTVD78Kf" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/69loh5nx9XNVoo3mU2K0du" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/4MMpZ7hJj5kcqYara3kSXE" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </a>
+        </li>
+        <li><a href="#">
+                <p>🐴 <strong>Travel</strong><small> - safe, day, journey </small></p>
+                <iframe src="https://open.spotify.com/embed/playlist/0vKHHesaaqdmbMZ1oB8Pee" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/3Vz5yr3PL1xIIAe89mPfT4" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            </a>
+        </li>
+        <li><a href="#">
+                <p>🏠 <strong>Town or city</strong><small> - safe, day, village </small></p>
+                <iframe src="https://open.spotify.com/embed/playlist/0vKHHesaaqdmbMZ1oB8Pee" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/3Vz5yr3PL1xIIAe89mPfT4" width="300" height="80"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            </a>
+        </li>
+
+
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
